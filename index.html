@@ -42,25 +42,28 @@ body{
 /* ================= HEADER ================= */
 .header{
     text-align:center;
-    padding:50px 30px 35px;
+    padding:60px 30px 40px;
 }
 
-/* Contenedor del logo */
-.logo-wrapper{
-    background:white;
-    padding:20px;
-    border-radius:25px;
-    display:inline-block;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-    margin-bottom:25px;
-}
-
-/* Imagen logo */
-.logo-img{
+/* ===== LOGO PNG TRANSPARENTE ===== */
+.logo-container{
     width:220px;
-    max-width:100%;
+    margin:0 auto 30px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.logo-img{
+    width:110%;
     height:auto;
     display:block;
+    filter: drop-shadow(0 15px 30px rgb(255, 255, 255));
+}
+
+/* Animación flotante elegante */
+@keyframes float{
+    0%{ transform: translateY(0px); }
+    50%{ transform: translateY(-10px); }
+    100%{ transform: translateY(0px); }
 }
 
 /* Nombre */
@@ -76,7 +79,7 @@ body{
     margin-top:5px;
 }
 
-/* ================= CARD BLANCA ================= */
+/* ================= CARD ================= */
 .card{
     background:#F4F6F8;
     border-radius:40px 40px 0 0;
@@ -140,8 +143,8 @@ body{
 
 /* ================= RESPONSIVE ================= */
 @media (max-width:480px){
-    .logo-img{
-        width:180px;
+    .logo-container{
+        width:170px;
     }
     .name{
         font-size:20px;
@@ -167,9 +170,9 @@ body{
 
     <div class="header">
 
-        <!-- LOGO CON FONDO BLANCO PARA QUE COMBINE -->
-        <div class="logo-wrapper">
-            <img src="./img/WhatsApp Image 2026-02-10 at 02.43.40.jpeg" alt="Bleu Inmobiliaria" class="logo-img">
+        <!-- LOGO PNG TRANSPARENTE -->
+        <div class="logo-container">
+            <img src="./img/896.png" alt="Bleu Inmobiliaria" class="logo-img">
         </div>
 
         <div class="name">Tu Nombre</div>
