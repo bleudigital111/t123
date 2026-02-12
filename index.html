@@ -43,40 +43,47 @@ body{
 .header{
     text-align:center;
     padding:60px 30px 40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 /* ===== LOGO PNG TRANSPARENTE ===== */
 .logo-container{
-    width:220px;
-    margin:0 auto 30px;
+    width:260px;          /* Más grande */
+    height:260px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:30px;
     animation:float 4s ease-in-out infinite;
 }
 
 .logo-img{
-    width:110%;
+    width:100%;
     height:auto;
     display:block;
-    filter: drop-shadow(0 15px 30px rgb(255, 255, 255));
+    filter: drop-shadow(0 20px 40px rgb(255, 255, 255));
 }
 
 /* Animación flotante elegante */
 @keyframes float{
     0%{ transform: translateY(0px); }
-    50%{ transform: translateY(-10px); }
+    50%{ transform: translateY(-15px); }
     100%{ transform: translateY(0px); }
 }
 
 /* Nombre */
 .name{
-    font-size:22px;
+    font-size:24px;
     font-weight:600;
     color:white;
+    margin-bottom:5px;
 }
 
 .role{
     color:#2EC5F2;
-    font-size:15px;
-    margin-top:5px;
+    font-size:16px;
 }
 
 /* ================= CARD ================= */
@@ -144,10 +151,14 @@ body{
 /* ================= RESPONSIVE ================= */
 @media (max-width:480px){
     .logo-container{
-        width:170px;
+        width:200px;
+        height:200px;
     }
     .name{
         font-size:20px;
+    }
+    .role{
+        font-size:14px;
     }
     .btn{
         font-size:16px;
