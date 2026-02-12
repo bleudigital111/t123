@@ -45,41 +45,14 @@ body{
     padding:60px 30px 40px;
 }
 
-/* ===== LOGO CIRCULAR PREMIUM ===== */
-.logo-container{
-    width:220px;
-    height:220px;
-    margin:0 auto 30px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#1F6FB2,#2EC5F2);
-    padding:6px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 0 30px rgba(46,197,242,0.4);
-    animation:glowPulse 3s infinite ease-in-out;
-}
-
+/* LOGO SIN FONDO */
 .logo-img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    border-radius:50%;
-    background:#072C4A;
-    padding:20px;
-}
-
-/* Animación glow */
-@keyframes glowPulse{
-    0%{
-        box-shadow:0 0 20px rgba(46,197,242,0.3);
-    }
-    50%{
-        box-shadow:0 0 45px rgba(46,197,242,0.6);
-    }
-    100%{
-        box-shadow:0 0 20px rgba(46,197,242,0.3);
-    }
+    width:240px;
+    max-width:90%;
+    height:auto;
+    display:block;
+    margin:0 auto 25px;
+    filter: drop-shadow(0 10px 25px rgba(46,197,242,0.25));
 }
 
 /* Nombre */
@@ -159,9 +132,8 @@ body{
 
 /* ===== RESPONSIVE ===== */
 @media (max-width:480px){
-    .logo-container{
-        width:170px;
-        height:170px;
+    .logo-img{
+        width:200px;
     }
     .name{
         font-size:20px;
@@ -187,11 +159,11 @@ body{
 
     <div class="header">
 
-        <div class="logo-container">
-            <img src="./img/89987744444.JPG" alt="Bleu Inmobiliaria" class="logo-img">
-        </div>
+        <!-- LOGO TRANSPARENTE -->
+        <img src="./img/WhatsApp Image 2026-02-10 at 02.43.40.jpeg" alt="Bleu Inmobiliaria" class="logo-img">
 
-        
+        <div class="name">Tu Nombre</div>
+        <div class="role">Asesor Inmobiliario Digital</div>
 
     </div>
 
@@ -205,6 +177,9 @@ body{
             <i class="fas fa-globe"></i> Ver Catálogo Infinito
         </button>
 
+        <button class="btn cita" onclick="agendarCita()">
+            <i class="fas fa-calendar-alt"></i> Cita Virtual
+        </button>
 
         <div class="qr">
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://tusitio.com" alt="QR Code">
@@ -220,7 +195,7 @@ body{
 
 <script>
 function openWhatsApp(){
-    window.open("https://wa.me/5217222900116","_blank");
+    window.open("https://wa.me/5210000000000","_blank");
 }
 
 function openCatalogo(){
