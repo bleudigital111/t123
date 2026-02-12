@@ -9,7 +9,7 @@
 
 <style>
 
-/* ===== RESET ===== */
+/* ================= RESET ================= */
 *{
     margin:0;
     padding:0;
@@ -17,7 +17,7 @@
     font-family:'Segoe UI', sans-serif;
 }
 
-/* ===== BODY ===== */
+/* ================= BODY ================= */
 body{
     background: radial-gradient(circle at center, #0B3D66 0%, #072C4A 70%);
     display:flex;
@@ -27,7 +27,7 @@ body{
     padding:20px;
 }
 
-/* ===== CONTENEDOR ===== */
+/* ================= CONTENEDOR ================= */
 .container{
     width:100%;
     max-width:480px;
@@ -39,20 +39,28 @@ body{
     flex-direction:column;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 .header{
     text-align:center;
-    padding:60px 30px 40px;
+    padding:50px 30px 35px;
 }
 
-/* LOGO SIN FONDO */
+/* Contenedor del logo */
+.logo-wrapper{
+    background:white;
+    padding:20px;
+    border-radius:25px;
+    display:inline-block;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    margin-bottom:25px;
+}
+
+/* Imagen logo */
 .logo-img{
-    width:240px;
-    max-width:90%;
+    width:220px;
+    max-width:100%;
     height:auto;
     display:block;
-    margin:0 auto 25px;
-    filter: drop-shadow(0 10px 25px rgba(46,197,242,0.25));
 }
 
 /* Nombre */
@@ -68,7 +76,7 @@ body{
     margin-top:5px;
 }
 
-/* ===== CARD ===== */
+/* ================= CARD BLANCA ================= */
 .card{
     background:#F4F6F8;
     border-radius:40px 40px 0 0;
@@ -76,7 +84,7 @@ body{
     text-align:center;
 }
 
-/* ===== BOTONES ===== */
+/* ================= BOTONES ================= */
 .btn{
     width:100%;
     padding:18px;
@@ -111,7 +119,7 @@ body{
     box-shadow:0 12px 25px rgba(0,0,0,0.25);
 }
 
-/* ===== QR ===== */
+/* ================= QR ================= */
 .qr{
     margin-top:30px;
 }
@@ -121,7 +129,7 @@ body{
     max-width:100%;
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 .footer{
     text-align:center;
     font-size:13px;
@@ -130,10 +138,10 @@ body{
     background:#072C4A;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 @media (max-width:480px){
     .logo-img{
-        width:200px;
+        width:180px;
     }
     .name{
         font-size:20px;
@@ -159,8 +167,10 @@ body{
 
     <div class="header">
 
-        <!-- LOGO TRANSPARENTE -->
-        <img src="./img/WhatsApp Image 2026-02-10 at 02.43.40.jpeg" alt="Bleu Inmobiliaria" class="logo-img">
+        <!-- LOGO CON FONDO BLANCO PARA QUE COMBINE -->
+        <div class="logo-wrapper">
+            <img src="./img/WhatsApp Image 2026-02-10 at 02.43.40.jpeg" alt="Bleu Inmobiliaria" class="logo-img">
+        </div>
 
         <div class="name">Tu Nombre</div>
         <div class="role">Asesor Inmobiliario Digital</div>
