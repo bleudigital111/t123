@@ -9,9 +9,7 @@
 
 <style>
 
-/* ========================
-   RESET
-======================== */
+/* ================= RESET ================= */
 *{
     margin:0;
     padding:0;
@@ -19,9 +17,7 @@
     font-family:'Segoe UI', sans-serif;
 }
 
-/* ========================
-   BODY
-======================== */
+/* ================= BODY ================= */
 body{
     background: radial-gradient(circle at center, #0B3D66 0%, #072C4A 70%);
     display:flex;
@@ -31,9 +27,7 @@ body{
     padding:20px;
 }
 
-/* ========================
-   CONTENEDOR PRINCIPAL
-======================== */
+/* ================= CONTENEDOR ================= */
 .container{
     width:100%;
     max-width:480px;
@@ -43,51 +37,46 @@ body{
     box-shadow:0 25px 60px rgba(0,0,0,0.35);
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
 }
 
-/* ========================
-   HEADER
-======================== */
+/* ================= HEADER ================= */
 .header{
     text-align:center;
-    padding:60px 30px 40px;
-    color:white;
+    padding:50px 30px 35px;
 }
 
-.logo{
-    font-size:60px;
-    background:linear-gradient(90deg,#2EC5F2,#1F6FB2);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+/* Contenedor del logo */
+.logo-wrapper{
+    background:white;
+    padding:20px;
+    border-radius:25px;
+    display:inline-block;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    margin-bottom:25px;
 }
 
-.header h1{
-    font-size:38px;
-    margin-top:10px;
-    font-weight:600;
+/* Imagen logo */
+.logo-img{
+    width:220px;
+    max-width:100%;
+    height:auto;
+    display:block;
 }
 
-.sub{
-    letter-spacing:3px;
-    font-size:12px;
-    opacity:0.8;
-}
-
-.header h2{
-    margin-top:30px;
-    font-weight:600;
+/* Nombre */
+.name{
     font-size:22px;
+    font-weight:600;
+    color:white;
 }
 
 .role{
     color:#2EC5F2;
     font-size:15px;
+    margin-top:5px;
 }
 
-/* ========================
-   CARD BLANCA
-======================== */
+/* ================= CARD BLANCA ================= */
 .card{
     background:#F4F6F8;
     border-radius:40px 40px 0 0;
@@ -95,9 +84,7 @@ body{
     text-align:center;
 }
 
-/* ========================
-   BOTONES
-======================== */
+/* ================= BOTONES ================= */
 .btn{
     width:100%;
     padding:18px;
@@ -132,9 +119,7 @@ body{
     box-shadow:0 12px 25px rgba(0,0,0,0.25);
 }
 
-/* ========================
-   QR
-======================== */
+/* ================= QR ================= */
 .qr{
     margin-top:30px;
 }
@@ -144,9 +129,7 @@ body{
     max-width:100%;
 }
 
-/* ========================
-   FOOTER
-======================== */
+/* ================= FOOTER ================= */
 .footer{
     text-align:center;
     font-size:13px;
@@ -155,17 +138,12 @@ body{
     background:#072C4A;
 }
 
-/* ========================
-   RESPONSIVE EXTRA
-======================== */
+/* ================= RESPONSIVE ================= */
 @media (max-width:480px){
-    .header{
-        padding:50px 20px 30px;
+    .logo-img{
+        width:180px;
     }
-    .header h1{
-        font-size:32px;
-    }
-    .header h2{
+    .name{
         font-size:20px;
     }
     .btn{
@@ -188,11 +166,15 @@ body{
 <div class="container">
 
     <div class="header">
-        <div class="logo">∞</div>
-        <h1>Bleu</h1>
-        <p class="sub">INMOBILIARIA</p>
-        <h2>Tu Nombre</h2>
-        <p class="role">Asesor Inmobiliario Digital</p>
+
+        <!-- LOGO CON FONDO BLANCO PARA QUE COMBINE -->
+        <div class="logo-wrapper">
+            <img src="./img/WhatsApp Image 2026-02-10 at 02.43.40.jpeg" alt="Bleu Inmobiliaria" class="logo-img">
+        </div>
+
+        <div class="name">Tu Nombre</div>
+        <div class="role">Asesor Inmobiliario Digital</div>
+
     </div>
 
     <div class="card">
@@ -216,7 +198,7 @@ body{
     </div>
 
     <div class="footer">
-        Conectando hogares, expandiendo horizontes. ∞
+        Conectando hogares, expandiendo horizontes.
     </div>
 
 </div>
