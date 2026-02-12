@@ -120,10 +120,6 @@ body{
     background:linear-gradient(90deg,#1F6FB2,#0B3D66);
 }
 
-.cita{
-    background:linear-gradient(90deg,#0B3D66,#072C4A);
-}
-
 .btn:hover{
     transform:translateY(-4px);
     box-shadow:0 12px 25px rgba(0,0,0,0.25);
@@ -186,9 +182,6 @@ body{
             <img src="./img/896.png" alt="Bleu Inmobiliaria" class="logo-img">
         </div>
 
-        <div class="name">Tu Nombre</div>
-        <div class="role">Asesor Inmobiliario Digital</div>
-
     </div>
 
     <div class="card">
@@ -199,10 +192,6 @@ body{
 
         <button class="btn catalogo" onclick="openCatalogo()">
             <i class="fas fa-globe"></i> Ver Catálogo Infinito
-        </button>
-
-        <button class="btn cita" onclick="agendarCita()">
-            <i class="fas fa-calendar-alt"></i> Cita Virtual
         </button>
 
         <div class="qr">
@@ -219,16 +208,16 @@ body{
 
 <script>
 function openWhatsApp(){
-    window.open("https://wa.me/5210000000000","_blank");
+    const mensaje = encodeURIComponent(
+        "¡Hola! 👋 Me interesa recibir información sobre propiedades con Bleu Inmobiliaria."
+    );
+    window.open(`https://wa.me/5217222900116?text=${mensaje}`, "_blank");
 }
 
 function openCatalogo(){
-    window.open("https://tusitio.com/catalogo","_blank");
+    window.open("https://bleudigital111.github.io/catalogo123/","_blank");
 }
 
-function agendarCita(){
-    window.open("https://calendly.com/tucita","_blank");
-}
 </script>
 
 </body>
