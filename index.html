@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bleu Inmobiliaria</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+/* ========================
+   RESET
+======================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* ========================
+   BODY
+======================== */
+body{
+    background: radial-gradient(circle at center, #0B3D66 0%, #072C4A 70%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* ========================
+   CONTENEDOR PRINCIPAL
+======================== */
+.container{
+    width:100%;
+    max-width:480px;
+    background:linear-gradient(180deg,#072C4A 0%, #0B3D66 100%);
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(0,0,0,0.35);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+/* ========================
+   HEADER
+======================== */
+.header{
+    text-align:center;
+    padding:60px 30px 40px;
+    color:white;
+}
+
+.logo{
+    font-size:60px;
+    background:linear-gradient(90deg,#2EC5F2,#1F6FB2);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.header h1{
+    font-size:38px;
+    margin-top:10px;
+    font-weight:600;
+}
+
+.sub{
+    letter-spacing:3px;
+    font-size:12px;
+    opacity:0.8;
+}
+
+.header h2{
+    margin-top:30px;
+    font-weight:600;
+    font-size:22px;
+}
+
+.role{
+    color:#2EC5F2;
+    font-size:15px;
+}
+
+/* ========================
+   CARD BLANCA
+======================== */
+.card{
+    background:#F4F6F8;
+    border-radius:40px 40px 0 0;
+    padding:45px 25px;
+    text-align:center;
+}
+
+/* ========================
+   BOTONES
+======================== */
+.btn{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    margin-bottom:20px;
+    font-size:17px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    font-weight:600;
+    color:white;
+}
+
+.whatsapp{
+    background:linear-gradient(90deg,#2EC5F2,#1F6FB2);
+}
+
+.catalogo{
+    background:linear-gradient(90deg,#1F6FB2,#0B3D66);
+}
+
+.cita{
+    background:linear-gradient(90deg,#0B3D66,#072C4A);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* ========================
+   QR
+======================== */
+.qr{
+    margin-top:30px;
+}
+
+.qr img{
+    width:160px;
+    max-width:100%;
+}
+
+/* ========================
+   FOOTER
+======================== */
+.footer{
+    text-align:center;
+    font-size:13px;
+    padding:20px;
+    color:white;
+    background:#072C4A;
+}
+
+/* ========================
+   RESPONSIVE EXTRA
+======================== */
+@media (max-width:480px){
+    .header{
+        padding:50px 20px 30px;
+    }
+    .header h1{
+        font-size:32px;
+    }
+    .header h2{
+        font-size:20px;
+    }
+    .btn{
+        font-size:16px;
+        padding:16px;
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        max-width:520px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="logo">∞</div>
+        <h1>Bleu</h1>
+        <p class="sub">INMOBILIARIA</p>
+        <h2>Tu Nombre</h2>
+        <p class="role">Asesor Inmobiliario Digital</p>
+    </div>
+
+    <div class="card">
+
+        <button class="btn whatsapp" onclick="openWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Escríbeme ahora
+        </button>
+
+        <button class="btn catalogo" onclick="openCatalogo()">
+            <i class="fas fa-globe"></i> Ver Catálogo Infinito
+        </button>
+
+        <button class="btn cita" onclick="agendarCita()">
+            <i class="fas fa-calendar-alt"></i> Cita Virtual
+        </button>
+
+        <div class="qr">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://tusitio.com" alt="QR Code">
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Conectando hogares, expandiendo horizontes. ∞
+    </div>
+
+</div>
+
+<script>
+function openWhatsApp(){
+    window.open("https://wa.me/5210000000000","_blank");
+}
+
+function openCatalogo(){
+    window.open("https://tusitio.com/catalogo","_blank");
+}
+
+function agendarCita(){
+    window.open("https://calendly.com/tucita","_blank");
+}
+</script>
+
+</body>
+</html>
