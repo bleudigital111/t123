@@ -50,7 +50,7 @@ body{
 
 /* ===== LOGO PNG TRANSPARENTE ===== */
 .logo-container{
-    width:260px;          /* Más grande */
+    width:260px;          
     height:260px;
     display:flex;
     justify-content:center;
@@ -71,19 +71,6 @@ body{
     0%{ transform: translateY(0px); }
     50%{ transform: translateY(-15px); }
     100%{ transform: translateY(0px); }
-}
-
-/* Nombre */
-.name{
-    font-size:24px;
-    font-weight:600;
-    color:white;
-    margin-bottom:5px;
-}
-
-.role{
-    color:#2EC5F2;
-    font-size:16px;
 }
 
 /* ================= CARD ================= */
@@ -135,6 +122,34 @@ body{
     max-width:100%;
 }
 
+/* ================= REDES SOCIALES ================= */
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+}
+
+.socials a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#2EC5F2;
+    color:white;
+    font-size:24px;
+    transition:all 0.3s ease;
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+    text-decoration:none;
+}
+
+.socials a:hover{
+    transform:scale(1.2);
+    box-shadow:0 12px 25px rgba(0,0,0,0.4);
+}
+
 /* ================= FOOTER ================= */
 .footer{
     text-align:center;
@@ -150,15 +165,14 @@ body{
         width:200px;
         height:200px;
     }
-    .name{
-        font-size:20px;
-    }
-    .role{
-        font-size:14px;
-    }
     .btn{
         font-size:16px;
         padding:16px;
+    }
+    .socials a{
+        width:45px;
+        height:45px;
+        font-size:22px;
     }
 }
 
@@ -196,6 +210,11 @@ body{
 
         <div class="qr">
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://tusitio.com" alt="QR Code">
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="socials">
+            <a href="https://www.facebook.com/share/189WMzzi6c/" target="_blank"><i class="fab fa-facebook-f"></i></a>
         </div>
 
     </div>
